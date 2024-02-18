@@ -1,5 +1,5 @@
 import express from "express";
-import axios from "axios";
+import axios, { all } from "axios";
 
 const app = express();
 const PORT = 3000;
@@ -35,6 +35,22 @@ app.post("/submit", async (req, res) => {
     }
 });    
 
+
+app.get("/classes", async (req, res) => {
+    try {
+        let result = await axios.get(API_URL + "/classes");
+
+        let allClasses = [];
+        result.data.results.forEach(element => {
+            allClasses.push(element.name)
+        });
+        
+        res.render("classes.ejs", { classes: allClasses });
+    } catch (error) {
+        console.log(error);
+        res.render("classes.ejs");
+    }
+});
 
 // Listen on the predefined port and start the server.
 app.listen(PORT, () => {

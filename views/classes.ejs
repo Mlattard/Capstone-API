@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<div class="sidebar">
+    <p>List of all playable classes</p>
+</div>
+
+<div class="content row row-cols-1 row-cols-md-3 g-4">
+<% classes.forEach(element => { %>
+
+    <div class="col">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title"><%= element %></h5>
+            </div>
+        </div>
+    </div>
+
+<% }) %>
+</div>
+
+<%- include("partials/footer.ejs") %>

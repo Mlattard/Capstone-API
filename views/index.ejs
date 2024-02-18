@@ -1,18 +1,18 @@
 <%- include("partials/header.ejs") %>
 
-<% if (locals.character) { %>
-
-    <div class="card">
-        <p> You should play a <%= character.race %> <%= character.class %>.</p>
-    </div>
-
-<% } else { %>
-
-    <h1>Generate your next character</h1>
+<div class="sidebar">
+    <p>Generate your next character</p>
 
     <form action="/submit" method="POST">
         <input type="submit" value="Generate">
     </form>
+</div>
+
+<% if (locals.character) { %>
+
+<div class="content">
+    <p> You should play a <%= character.race %> <%= character.class %>.</p>
+</div>
 
 <% } %>
 

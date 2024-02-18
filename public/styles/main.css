@@ -1,0 +1,98 @@
+:root {
+    --red: #e7414d;
+    --grey: #ffffff;
+    --lightblue: #b0dedf;
+    --midblue: #477fa2;
+    --darkblue: #1e375a;
+}
+
+@font-face {
+    font-family: 'dungeons&dragons';
+    src: url('../fonts/DragonHunter-9Ynxj.otf') format('opentype');
+}
+
+html,
+body {
+    height: 100%;
+     background-color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+header,
+footer {
+    flex: 0 0 auto;
+    background-color: var(--darkblue);
+}
+
+main {
+    display: flex;
+    text-align: center;
+    flex: 1 0 auto;
+}
+
+.sidebar {
+    max-width: 20%;
+    padding: 5vmin;
+    background-color: var(--midblue);
+}
+
+.content {
+    padding: 5vmin;
+    margin: 0;
+}
+
+.sidebar > p {
+    text-align: center;
+    color: var(--grey);
+    font-size: 2em;
+}
+
+.content > p {
+    color: var(--darkblue);
+}
+
+h6 {
+    color: var(--grey);
+    font-weight: lighter;
+}
+
+form {
+    margin-top: 50px;
+}
+
+textarea {
+    line-height: 150%;
+}
+
+.navbar {
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar>.container-fluid, #navbarNav {
+    justify-content: center;
+}
+
+.navbar-brand {
+    margin:0;
+}
+
+.nav-link {
+    color: var(--grey);
+}
+
+.nav-link:hover {
+    color: var(--lightblue);
+}
+
+.title {
+    color: var(--grey);
+    font-weight: bold;
+    font-family: "dungeons&dragons", sans-serif;
+}
+
